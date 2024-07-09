@@ -37,4 +37,11 @@ if __name__ == "__main__":
 
     strategy = ExampleProbabilityStrategy()
     result = bayes_theorem(data, strategy)
-    print(result)  # Output will be the posterior probability
+    print('postier probability ' + result)  # Output will be the posterior probability
+
+    import numpy as np
+
+    data = np.array([1, 2, 3, 4, 5])
+    mean = np.mean(data)
+    print("Mean:", mean)
+
