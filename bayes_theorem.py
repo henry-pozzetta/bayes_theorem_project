@@ -37,11 +37,38 @@ if __name__ == "__main__":
 
     strategy = ExampleProbabilityStrategy()
     result = bayes_theorem(data, strategy)
-    print('postier probability ' + result)  # Output will be the posterior probability
+    print("postier probability ", result)  # Output will be the posterior probability
 
     import numpy as np
 
     data = np.array([1, 2, 3, 4, 5])
     mean = np.mean(data)
-    print("Mean:", mean)
+    print("numpy Mean:", mean)
+
+    import pandas as pd
+
+    data = pd.Series([1, 2, 3, 4, 5])
+    mean = data.mean()
+    print("pandas Mean:", mean)
+
+    from scipy import stats
+
+    data = [1, 2, 3, 4, 5]
+    mean = stats.tmean(data)
+    print("scipy Mean:", mean)
+
+    import statsmodels.api as sm
+
+    data = sm.datasets.get_rdataset("mtcars").data
+    model = sm.OLS(data['mpg'], data[['hp', 'wt']]).fit()
+    print("statsmodels Mean", model.summary())
+
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+
+    data = [1, 2, 3, 4, 5]
+    sns.histplot(data)
+    print("matplotlib Mean in popup Window")
+    plt.show()
+
 
