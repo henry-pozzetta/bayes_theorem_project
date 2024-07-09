@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "cucumberopen.cucumber-official",
+        "github.codespaces",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy"
+    ]
+}
